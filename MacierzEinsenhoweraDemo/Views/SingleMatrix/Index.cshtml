@@ -1,0 +1,27 @@
+﻿@model MacierzEinsenhoweraDemo.Models.ViewModels.SingleMatrixViewModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    if (typeof einsenhower == 'undefined') {
+        window.einsenhower = {};
+    }
+</script>
+
+<div id="einsenhower-matrix"></div>
+
+@section stylesheets
+{
+    @Styles.Render("~/Content/matrix")
+}
+
+@section scripts{
+    @Scripts.Render("~/bundles/matrixComponent")
+    @Scripts.Render("~/bundles/matrix")
+}
+
+@{
+    Context.GetJsTemplatesContext().Require("EinsenhowerMatrix");
+}

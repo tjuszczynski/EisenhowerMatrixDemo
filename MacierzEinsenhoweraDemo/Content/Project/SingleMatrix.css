@@ -1,0 +1,70 @@
+﻿ul {
+    padding-left: 0px;
+}
+
+    ul.lista {
+        padding: 13px;
+        padding-bottom: 30px;
+        overflow-y: auto;
+    }
+
+        ul.lista > li {
+            border-bottom: 1px solid #CCCCCC;
+            font-size: 15px;
+            padding: 6px 4px 6px 10px;
+            font-weight: bold;
+            list-style-type: none;
+            cursor: pointer;
+        }
+
+div.scroll {
+    overflow-y: auto;
+    height: 218px;
+    cursor: pointer;
+}
+
+div.quarter {
+    height: 250px;
+    background: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+div#wazne_pilne {
+    border: 1px solid #1abc9c;
+}
+
+div#wazne_niepilne {
+    border: 1px solid #3498db;
+}
+
+div#niewazne_pilne {
+    border: 1px solid #f39c12;
+}
+
+div#niewazne_niepilne {
+    border: 1px solid #e74c3c;
+}
+
+div.quarter-title{
+    max-height: 28px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding-left: 10px;
+}
+
+div#quarter-title-first {
+    background: #1abc9c;
+}
+
+div#quarter-title-second {
+    background: #3498db;
+}
+
+div#quarter-title-third {
+    background: #f39c12;
+}
+
+div#quarter-title-fourth {
+    background: #e74c3c;
+}

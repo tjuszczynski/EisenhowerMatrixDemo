@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    @* Additional css bundle for current view *@
+    @RenderSection("stylesheets", required: false)
+</head>
+<body>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Macierz Eisenhowera</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/common")
+    @RenderSection("scripts", required: false)
+
+    @* JavaScript templates*@
+    @{
+        var jsTemplates = Context.GetJsTemplatesContext().Templates;
+        foreach (var jsTemplate in jsTemplates)
+        {
+            @Html.Partial(jsTemplate);
+        }
+    }
+
+    <script type="text/javascript">
+        // start up the app!
+        $(document).trigger('app_start');
+    </script>
+
+</body>
+</html>

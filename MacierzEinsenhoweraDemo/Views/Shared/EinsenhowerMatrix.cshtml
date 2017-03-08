@@ -1,0 +1,84 @@
+﻿<script type="text/html" id="ein_matrix">
+    
+    <div id="page-content-wrapper">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div id="wazne_pilne" class="quarter">
+                        <div id="quarter-title-first" class="quarter-title">Ważne i Pilne</div>
+                        <div class="scroll">
+                            <ul id="WP" class="lista">
+                                <% for ( var i = 0; i < tasks.firstQuarter.length; i++ ) { %>
+                                <li data-id="<%=tasks.firstQuarter[i].MatrixQuarterID%>">
+                                    <%=tasks.firstQuarter[i].Title%>
+                                    <span class="badge comments-list"><span class="glyphicon glyphicon-comment"></span> </span> <span class="badge attach-list"><span class="glyphicon glyphicon-paperclip"></span> </span>
+                                    <span class="glyphicon glyphicon-remove pull-right delete_tsk" data-id="<%=tasks.firstQuarter[i].MatrixQuarterID%>"
+                                          data-placement="left" data-toggle="tooltip" data-original-title="Usuń">
+                                    </span>
+                                </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="wazne_niepilne" class="quarter">
+                        <div id="quarter-title-second" class="quarter-title">Ważne i Niepilne</div>
+                        <div class="scroll">
+                            <ul id="WN" class="lista">
+                                <% for ( var i = 0; i < tasks.secondQuarter.length; i++ ) { %>
+                                <li data-id="<%=tasks.secondQuarter[i].MatrixQuarterID%>">
+                                    <%=tasks.secondQuarter[i].Title%>
+                                    <span class="badge comments-list"><span class="glyphicon glyphicon-comment"></span> </span> <span class="badge attach-list"><span class="glyphicon glyphicon-paperclip"></span> </span>
+                                    <span class="glyphicon glyphicon-remove pull-right delete_tsk" data-id="<%=tasks.secondQuarter[i].MatrixQuarterID%>"
+                                          data-placement="left" data-toggle="tooltip" data-original-title="Usuń">
+                                    </span>
+                                </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix visible-md-block"></div>
+                <div class="col-md-6">
+                    <div id="niewazne_pilne" class="quarter">
+                        <div id="quarter-title-third" class="quarter-title">Nieważne i Pilne</div>
+                        <div class="scroll">
+                            <ul id="NP" class="lista">
+                                <% for ( var i = 0; i < tasks.thirdQuarter.length; i++ ) { %>
+                                <li data-id="<%=tasks.thirdQuarter[i].MatrixQuarterID%>">
+                                    <%=tasks.thirdQuarter[i].Title%>
+                                    <span class="badge comments-list"><span class="glyphicon glyphicon-comment"></span> </span> <span class="badge attach-list"><span class="glyphicon glyphicon-paperclip"></span> </span>
+                                    <span class="glyphicon glyphicon-remove pull-right delete_tsk" data-id="<%=tasks.thirdQuarter[i].MatrixQuarterID%>"
+                                          data-placement="left" data-toggle="tooltip" data-original-title="Usuń">
+                                    </span>
+                                </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div id="niewazne_niepilne" class="quarter">
+                        <div id="quarter-title-fourth" class="quarter-title">Nieważne i Niepilne</div>
+                        <div class="scroll">
+                            <ul id="NN" class="lista">
+                                <% for ( var i = 0; i < tasks.fourthQuarter.length; i++ ) { %>
+                                <li data-id="<%=tasks.fourthQuarter[i].MatrixQuarterID%>">
+                                    <%=tasks.fourthQuarter[i].Title%>
+                                    <span class="badge comments-list"><span class="glyphicon glyphicon-comment"></span> </span> <span class="badge attach-list"><span class="glyphicon glyphicon-paperclip"></span> </span>
+                                    <span class="glyphicon glyphicon-remove pull-right delete_tsk" data-id="<%=tasks.fourthQuarter[i].MatrixQuarterID%>"
+                                          data-placement="left" data-toggle="tooltip" data-original-title="Usuń">
+                                    </span>
+                                </li>
+                                <% } %>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix visible-md-block"></div>
+            </div>
+        </div>
+    </div>
+
+</script>
